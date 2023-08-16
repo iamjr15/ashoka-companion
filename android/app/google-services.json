@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "201535661836",
+    "project_id": "gj11-aoc",
+    "storage_bucket": "gj11-aoc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201535661836:android:4bfbc47be366fddbe24b29",
+        "android_client_info": {
+          "package_name": "com.example.gojek_university_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201535661836-bqj10mc3allcui3lehm5ucbins9v98fu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gojek_university_app",
+            "certificate_hash": "8422b86e157f882a88d39ee17f2df9696ee46611"
+          }
+        },
+        {
+          "client_id": "201535661836-ndoccvuc9sg28md0uojshqes33pttbtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gojek_university_app",
+            "certificate_hash": "290ae354ecbe1f7c50a53c01f88d17407f9b2899"
+          }
+        },
+        {
+          "client_id": "201535661836-rvq5c83l51jk8nf4sr40v5tp9qsao8f6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5wCrH0w_ffbEqCBge4FQbtaf8Ikw41QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201535661836-0413c6tku7c74i8s3ae7om3o2ns9d646.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "201535661836-ahfe9gta8t1c2mteg9gpqt04pfb9c1rn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gojekUniversityApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

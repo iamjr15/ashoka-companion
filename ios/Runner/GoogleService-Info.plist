@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>CLIENT_ID</key>
+	<string>201535661836-ahfe9gta8t1c2mteg9gpqt04pfb9c1rn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.201535661836-ahfe9gta8t1c2mteg9gpqt04pfb9c1rn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>201535661836-bqj10mc3allcui3lehm5ucbins9v98fu.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCMau2qIb2k_Pw4CMKO7An8VbCFWDMAFzY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>201535661836</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.gojekUniversityApp</string>
+	<key>PROJECT_ID</key>
+	<string>gj11-aoc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gj11-aoc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:201535661836:ios:7b59768c1c77fc96e24b29</string>
+</dict>
+</plist>
