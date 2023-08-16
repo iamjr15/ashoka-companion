@@ -1,4 +1,4 @@
-package com.example.jigyansurout
+package com.ashokacompanion.jigyansurout
 
 import io.flutter.embedding.android.FlutterActivity
 

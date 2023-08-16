@@ -50,20 +50,21 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD5wCrH0w_ffbEqCBge4FQbtaf8Ikw41QM',
-    appId: '1:201535661836:android:4bfbc47be366fddbe24b29',
-    messagingSenderId: '201535661836',
-    projectId: 'gj11-aoc',
-    storageBucket: 'gj11-aoc.appspot.com',
+    apiKey: 'AIzaSyBEi_HB6eNIhNTXDVYmYJ5wYjgaYXRLqXc',
+    appId: '1:929335192361:android:3bdbcc796a793c57442538',
+    messagingSenderId: '929335192361',
+    projectId: 'ashokacompanion',
+    storageBucket: 'ashokacompanion.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCMau2qIb2k_Pw4CMKO7An8VbCFWDMAFzY',
-    appId: '1:201535661836:ios:7b59768c1c77fc96e24b29',
-    messagingSenderId: '201535661836',
-    projectId: 'gj11-aoc',
-    storageBucket: 'gj11-aoc.appspot.com',
-    iosClientId: '201535661836-ahfe9gta8t1c2mteg9gpqt04pfb9c1rn.apps.googleusercontent.com',
-    iosBundleId: 'com.example.gojekUniversityApp',
+    apiKey: 'AIzaSyA1a9jbGqLyTT4XThFqfDOMEDJANfG3Ufo',
+    appId: '1:929335192361:ios:b06d5441cbee9d89442538',
+    messagingSenderId: '929335192361',
+    projectId: 'ashokacompanion',
+    storageBucket: 'ashokacompanion.appspot.com',
+    iosClientId:
+        '929335192361-5omt8el6jduquvs8h0b3dtq9rgohu7sm.apps.googleusercontent.com',
+    iosBundleId: 'com.ashokacompanion.jigyansurout',
   );
 }

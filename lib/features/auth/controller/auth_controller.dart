@@ -37,8 +37,6 @@ final fetchUserByIdProvider = StreamProvider.family((ref, String uid) {
   return profileController.getUserInfoByUid(uid);
 });
 
-
-
 // final currUserAuthProvider = Provider((ref) {
 //   final authCtr = ref.watch(authControllerProvider.notifier);
 //   return authCtr.currUser();
@@ -95,7 +93,7 @@ class AuthController extends StateNotifier<bool> {
           Theme.of(context).platform == TargetPlatform.iOS
               ? await GoogleSignIn(
                   clientId:
-                      "201535661836-ahfe9gta8t1c2mteg9gpqt04pfb9c1rn.apps.googleusercontent.com",
+                      "929335192361-5omt8el6jduquvs8h0b3dtq9rgohu7sm.apps.googleusercontent.com",
                   scopes: ['email', 'profile'],
                   hostedDomain: "",
                 ).signIn()
@@ -128,7 +126,10 @@ class AuthController extends StateNotifier<bool> {
               createdAt: DateTime.now(),
               isOnline: true,
               instagramHandle: '',
-              interests: [], isAvailable: false, matcheduser: '', notificationToken: '');
+              interests: [],
+              isAvailable: false,
+              matcheduser: '',
+              notificationToken: '');
           final result2 =
               await _databaseApis.saveUserInfo(userModel: userModel);
           result2.fold((l) {
@@ -199,8 +200,6 @@ class AuthController extends StateNotifier<bool> {
     });
   }
 
-
-
   Future<UserModel> getCurrentUserInfo() async {
     final userId = await _authApis.getCurrentUser();
     final result = await _databaseApis.getCurrentUserInfo(uid: userId!.uid);
@@ -210,9 +209,9 @@ class AuthController extends StateNotifier<bool> {
   }
 
   Future<UserModel> getUserInfoByUidFuture(String uid) async {
-    final result = await _databaseApis.getCurrentUserInfo(uid:  uid);
+    final result = await _databaseApis.getCurrentUserInfo(uid: uid);
     UserModel userModel =
-    UserModel.fromMap(result.data() as Map<String, dynamic>);
+        UserModel.fromMap(result.data() as Map<String, dynamic>);
     return userModel;
   }
 
@@ -279,7 +278,7 @@ class AuthController extends StateNotifier<bool> {
       required UserModel userModel}) async {
     state = true;
     UserModel updateProfileUserModel = userModel;
-    updateProfileUserModel= updateProfileUserModel.copyWith(
+    updateProfileUserModel = updateProfileUserModel.copyWith(
         interests: interests, instagramHandle: instagramHandle);
     final result2 = await _databaseApis.updateCurrentUserInfo(
         userModel: updateProfileUserModel);
@@ -294,11 +293,12 @@ class AuthController extends StateNotifier<bool> {
 
   Future<void> updateCurrentUserInstagramInfo(
       {required BuildContext context,
-        required String instagramHandle,
-        required UserModel userModel}) async {
+      required String instagramHandle,
+      required UserModel userModel}) async {
     state = true;
     UserModel updateProfileUserModel = userModel;
-    updateProfileUserModel= updateProfileUserModel.copyWith(instagramHandle: instagramHandle);
+    updateProfileUserModel =
+        updateProfileUserModel.copyWith(instagramHandle: instagramHandle);
     final result2 = await _databaseApis.updateCurrentUserInfo(
         userModel: updateProfileUserModel);
     result2.fold((l) {
