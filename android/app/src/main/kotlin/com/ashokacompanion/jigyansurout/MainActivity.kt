@@ -1,4 +1,4 @@
-package com.example.gojek_university_app
+package com.example.jigyansurout
 
 import io.flutter.embedding.android.FlutterActivity
 
