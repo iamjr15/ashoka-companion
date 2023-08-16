@@ -24,11 +24,10 @@ class MainMenuScreen extends ConsumerStatefulWidget {
   ConsumerState<MainMenuScreen> createState() => _MainMenuScreenState();
 }
 
-class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBindingObserver{
+class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
+    with WidgetsBindingObserver {
   /// This is the Global key for handling side Navigation Bar
   final GlobalKey<SideMenuState> _sideMenuKey = GlobalKey<SideMenuState>();
-
-
 
   @override
   void initState() {
@@ -36,15 +35,17 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
     super.initState();
     initialization();
   }
+
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    switch(state){
+    switch (state) {
       case AppLifecycleState.resumed:
         ref.read(authControllerProvider.notifier).setUserState(true);
         break;
@@ -53,16 +54,12 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
       case AppLifecycleState.inactive:
         ref.read(authControllerProvider.notifier).setUserState(false);
         break;
+      case AppLifecycleState.hidden:
+        break;
     }
   }
 
-
-
-
-
-
-
- /// Here in this method, we are initializing necessary methods
+  /// Here in this method, we are initializing necessary methods
   initialization() async {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       /// Using controller to set the state of user as On, we will
@@ -72,8 +69,12 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
       ref.read(authControllerProvider.notifier).setUserState(true);
 
       /// if the app closes unexpectedly or some other error it will clear available status and matched user
-      ref.read(blindChatControllerProvider.notifier).setMyAvailableState(isAvailable: false);
-      ref.read(blindChatControllerProvider.notifier).resetMatchedUserIdForMyself();
+      ref
+          .read(blindChatControllerProvider.notifier)
+          .setMyAvailableState(isAvailable: false);
+      ref
+          .read(blindChatControllerProvider.notifier)
+          .resetMatchedUserIdForMyself();
 
       /// This is to get the current user data model. And then save it to the
       /// controller so that we could access it anywhere in the app using
@@ -92,14 +93,15 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
     await authCtr.logoutStudent(context: context);
   }
 
-
   /// Method to build the side Menu Bar Items.
   buildMenu() {
     final navCtr = ref.watch(navigationController);
     final authNotifierProvider = ref.watch(authNotifierCtr);
     String name = authNotifierProvider.userModel?.name ?? 'Richard';
     String? profilePic = authNotifierProvider.userModel?.profileImage;
-    String id = authNotifierProvider.userModel!=null ?returnIdFromEmail(authNotifierProvider.userModel!.email): '';
+    String id = authNotifierProvider.userModel != null
+        ? returnIdFromEmail(authNotifierProvider.userModel!.email)
+        : '';
     return SingleChildScrollView(
       padding: EdgeInsets.only(top: 50.h, right: 46.w),
       child: Column(
@@ -146,10 +148,11 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
               crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SizedBox(height: 38.h,),
+                SizedBox(
+                  height: 38.h,
+                ),
                 Text(
                   'hello $name!',
-
                   style: getBoldStyle(
                     color: MyColors.textColor,
                     fontSize: MyFonts.size20,
@@ -193,7 +196,6 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
                   iconPath: AppAssets.chatIconNew,
                   pageName: 'blindchat',
                 ),
-
                 NavigationPageTile(
                   onPageTap: () {
                     navCtr.setIndex(3);
@@ -218,8 +220,6 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -228,7 +228,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
       },
       child: SideMenu(
         key: _sideMenuKey,
-        background: MyColors.newLightYellowColor ,
+        background: MyColors.newLightYellowColor,
         menu: buildMenu(),
         closeIcon: Icon(Icons.close, size: 28.h, color: MyColors.textColor),
         type: SideMenuType.shrinkNSlide,
@@ -245,7 +245,8 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
                     /// Using this consumer to get the index of the current screen in the
                     /// Main Screen.
                     Consumer(
-                      builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                      builder:
+                          (BuildContext context, WidgetRef ref, Widget? child) {
                         final navCtr = ref.watch(navigationController);
                         return Column(
                           children: [
@@ -257,7 +258,8 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen> with WidgetsBin
                     Padding(
                       padding: EdgeInsets.only(top: 20.h),
                       child: Consumer(
-                        builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                        builder: (BuildContext context, WidgetRef ref,
+                            Widget? child) {
                           /// Here first we are accessing the controller, then
                           /// we are accessing the index of current screen,
                           /// based on that we are showing it to the user.

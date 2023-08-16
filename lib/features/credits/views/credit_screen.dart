@@ -1,3 +1,4 @@
+import 'package:gojek_university_app/commons/common_functions/url_launch.dart';
 import 'package:gojek_university_app/features/credits/widgets/credit_widget.dart';
 import 'package:gojek_university_app/features/credits/widgets/thanks_widget.dart';
 import 'package:gojek_university_app/utils/constants/assets_manager.dart';
@@ -34,25 +35,33 @@ class CreditScreen extends StatelessWidget {
 
             /// Credits Card Widget
             CreditWidget(
-              imagePath: AppAssets.samuelImage,
+              imagePath: AppAssets.jigyansuImage,
               smallSubTitle: 'Computer Science',
               title: 'Jigyansu Rout , UG24, Computer Science',
               subtitle: 'App Development + Design',
-              onTap: () {},
+              onTap: () {
+                launchURL(Url: "https://www.linkedin.com/in/iamjr15/");
+              },
             ),
             CreditWidget(
               smallSubTitle: 'Psychology',
-              imagePath: AppAssets.sophiaImage,
+              imagePath: AppAssets.tanishaImage,
               title: 'Tanisha Raghav , UG24, Psychology',
               subtitle: 'Design + App Architecture',
-              onTap: () {},
+              onTap: () {
+                launchURL(
+                    Url:
+                        "https://www.linkedin.com/in/tanisha-raghav-0b3a3b1b4/");
+              },
             ),
             CreditWidget(
               smallSubTitle: 'Computer Science',
-              imagePath: AppAssets.albertoImage,
+              imagePath: AppAssets.hazimImage,
               title: 'Hazim Bin Fayaz, UG24, Computer Science',
               subtitle: 'Ashoka Assist + Resource Collation',
-              onTap: () {},
+              onTap: () {
+                launchURL(Url: "https://www.linkedin.com/in/hazimbf/");
+              },
             ),
             const ThanksWidget(),
             SizedBox(
