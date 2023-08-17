@@ -47,7 +47,7 @@ class _BlindChatFinishScreenState extends ConsumerState<BlindChatFinishScreen> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.w),
               child: Text(
-                'did you \nhave fun \ntalking to \n${widget.matchedUser.name}?',
+                'did you \nhave fun \ntalking to \n${widget.matchedUser.name.toLowerCase()}?',
                 textAlign: TextAlign.start,
                 style: getBoldStyle(
                     fontSize: MyFonts.size34,

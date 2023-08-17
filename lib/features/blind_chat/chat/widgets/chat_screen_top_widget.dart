@@ -74,7 +74,7 @@ class _ChatScreenTopWidgetState extends State<ChatScreenTopWidget> {
       });
       showLoadingDialog(
           loadingText:
-              'Closing this session so you can chat with someone else.',
+              'closing this session so you can chat with someone else',
           pop: true);
       await saveSkipData();
       final blindChatCtr = ref.read(blindChatControllerProvider.notifier);
@@ -132,7 +132,7 @@ class _ChatScreenTopWidgetState extends State<ChatScreenTopWidget> {
               onTap: () async {
                 bool leave = await leaveChat(context);
                 if (leave) {
-                  showLoadingDialog(loadingText: 'Leaving The Chat Session');
+                  showLoadingDialog(loadingText: 'leaving this chat session');
                   final navCtr = ref.watch(navigationController);
                   final blindChatCtr =
                       ref.read(blindChatControllerProvider.notifier);
@@ -167,7 +167,7 @@ class _ChatScreenTopWidgetState extends State<ChatScreenTopWidget> {
                   if (canSkip()) {
                     skipChat(ref);
                   } else {
-                    showToast(msg: 'You cannot Skip more than 3 times/24hr');
+                    showToast(msg: 'you cannot skip more than 3 times/24hr');
                   }
                 }
               },

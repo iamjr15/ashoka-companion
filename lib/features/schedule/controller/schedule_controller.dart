@@ -66,7 +66,7 @@ class ScheduleController extends ChangeNotifier {
     /// the selected date, based on that we are storing that model
     /// to the todays model variable.
     for (ScheduleModel model in models) {
-      if(model.dayDate.day == date.day){
+      if(model.dayDate.day == date.day && model.dayDate.year == date.year && model.dayDate.month == date.month){
         settodaySchedule(model);
       }
     }
@@ -89,7 +89,7 @@ class ScheduleController extends ChangeNotifier {
   setScheduleModelForDay({required List<ScheduleModel> models}){
     settodaySchedule(null);
     for (ScheduleModel model in models) {
-      if(model.dayDate.day == activeDate.day){
+      if(model.dayDate.day == activeDate.day && model.dayDate.month == activeDate.month &&model.dayDate.year == activeDate.year){
         settodaySchedule(model);
       }
     }

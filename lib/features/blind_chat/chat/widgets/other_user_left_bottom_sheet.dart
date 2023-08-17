@@ -79,7 +79,7 @@ class _OtherUserLeftBottomSheetState extends State<OtherUserLeftBottomSheet> {
           child: Column(
             children: [
               Text(
-                '${widget.otherName} has left the chat',
+                '${widget.otherName.toLowerCase()} has left the chat',
                 textAlign: TextAlign.center,
                 style: getBoldStyle(
                     fontSize: MyFonts.size16,

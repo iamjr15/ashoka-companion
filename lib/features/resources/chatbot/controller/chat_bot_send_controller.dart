@@ -47,8 +47,8 @@ class ChatBotSendController extends StateNotifier<bool> {
       state = false;
       showAwesomeSnackBar(
           context: context,
-          title: '',
-          msg: l.message,
+          title: 'Oh No!',
+          msg: 'Server Error Occurred! Need your patience!',
           type: ContentType.failure);
     }, (r) async {
       state = false;

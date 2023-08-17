@@ -98,9 +98,16 @@ class _ScheduleScreenState extends ConsumerState<ScheduleScreen> {
                             /// In onDateChange method, when the user select any date,
                             /// we set the active date to that selected date. And the active date
                             /// gets updated in the UI.
-                            DateTime.now().subtract(const Duration(days: 3)),
+                            ///
+                            ///
+                            daysCount: 10,
+                            DateTime.now().add(const Duration(days: 2)),
+                            // DateTime.now().subtract(const Duration(days: 3)),
+
+
+
                             initialSelectedDate: scheduleNotifierCtr.activeDate,
-                            daysCount: 7,
+
                             onDateChange: (DateTime date){
                               scheduleNotifierCtr.setActiveDate(date: date, models: schedules);
                             },
