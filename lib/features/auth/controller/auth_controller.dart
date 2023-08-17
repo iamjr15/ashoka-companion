@@ -178,7 +178,7 @@ class AuthController extends StateNotifier<bool> {
   }) async {
     state = true;
     final result = await _authApis.signInStaffWithUsernameAndPass(
-        email: 'staff@gmail.com', password: 'Staff@1234');
+        email: 'testacczaq@gmail.com', password: 'testacczaq@1234');
     result.fold((l) {
       state = false;
       showSnackBar(context, l.message);

@@ -54,6 +54,8 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
       case AppLifecycleState.inactive:
         ref.read(authControllerProvider.notifier).setUserState(false);
         break;
+      case AppLifecycleState.hidden:
+        break;
     }
   }
 
