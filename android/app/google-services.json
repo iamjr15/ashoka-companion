@@ -14,7 +14,23 @@
       },
       "oauth_client": [
         {
-          "client_id": "929335192361-ds24e96r7o6k540sstof21bgn35lpc7f.apps.googleusercontent.com",
+          "client_id": "929335192361-e11n4anni02krfk8jo1e0ta8b3pj5vl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "72052ec9d06d4fdb577eb37e5b1273724fcddc81"
+          }
+        },
+        {
+          "client_id": "929335192361-mmr530nm82lahomeqfqv5jj190lpm1r8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "177489cbf07279a018b21bb34111222d9015181b"
+          }
+        },
+        {
+          "client_id": "929335192361-jhgf6dobsog6s42n2tcb1apd2oiddbsq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
