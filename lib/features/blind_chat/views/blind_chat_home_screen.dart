@@ -136,7 +136,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
                           height: 16.h,
                         ),
                         Text(
-                          'connect with other \n students randomly from your\n university',
+                          'connect with other \n students randomly and start\n networking',
                           textAlign: TextAlign.center,
                           style: getMediumStyle(fontSize: MyFonts.size20),
                         ),
