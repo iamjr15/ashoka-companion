@@ -8,7 +8,8 @@ class CreditWidget extends StatelessWidget {
     required this.title,
     required this.imagePath,
     required this.onTap,
-    required this.subtitle, required this.smallSubTitle,
+    required this.subtitle,
+    required this.smallSubTitle,
   });
   final String title;
   final String subtitle;
@@ -22,19 +23,27 @@ class CreditWidget extends StatelessWidget {
       padding: EdgeInsets.all(23.h),
       margin: EdgeInsets.symmetric(vertical: 25.h),
       decoration: BoxDecoration(
-          color: MyColors.newLightGreyColor,
-          borderRadius: BorderRadius.circular(15.r),
-
+        color: MyColors.newLightGreyColor,
+        borderRadius: BorderRadius.circular(15.r),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          CircleAvatar(
-            radius: 32.r,
+          // CircleAvatar(
+          //   radius: 32.r,
+          //   child: Image.asset(
+          //     imagePath,
+          //     width: 65.w,
+          //     height: 65.h,
+          //   ),
+          // ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(32.0),
             child: Image.asset(
               imagePath,
-              width: 65.w,
-              height: 65.h,
+              fit: BoxFit.cover,
+              width: 65,
+              height: 65,
             ),
           ),
           SizedBox(
@@ -45,13 +54,11 @@ class CreditWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                constraints: BoxConstraints(
-                  maxWidth: 213.w
-                ),
+                constraints: BoxConstraints(maxWidth: 213.w),
                 child: Text(
                   title,
-                  style:
-                  getSemiBoldStyle(fontSize: MyFonts.size20, color: MyColors.black),
+                  style: getSemiBoldStyle(
+                      fontSize: MyFonts.size20, color: MyColors.black),
                 ),
               ),
               SizedBox(
@@ -60,7 +67,8 @@ class CreditWidget extends StatelessWidget {
               Text(
                 smallSubTitle,
                 style: getMediumStyle(
-                    fontSize: MyFonts.size12, color: MyColors.newTextBlackSecondaryColor),
+                    fontSize: MyFonts.size12,
+                    color: MyColors.newTextBlackSecondaryColor),
               ),
               SizedBox(
                 height: 3.h,
@@ -68,7 +76,8 @@ class CreditWidget extends StatelessWidget {
               Text(
                 subtitle,
                 style: getMediumStyle(
-                    fontSize: MyFonts.size12, color: MyColors.newTextBlackSecondaryColor),
+                    fontSize: MyFonts.size12,
+                    color: MyColors.newTextBlackSecondaryColor),
               )
             ],
           )

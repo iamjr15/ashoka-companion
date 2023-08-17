@@ -46,6 +46,14 @@ class ThanksWidget extends StatelessWidget {
             style: getRegularStyle(
                 fontSize: MyFonts.size14, color: MyColors.newBlackColor),
           ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            'Mr. Saurabh Kumar',
+            style: getRegularStyle(
+                fontSize: MyFonts.size14, color: MyColors.newBlackColor),
+          ),
         ],
       ),
     );
