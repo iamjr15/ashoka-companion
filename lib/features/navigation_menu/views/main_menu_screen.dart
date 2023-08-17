@@ -45,7 +45,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    switch (state) {
+    switch(state){
       case AppLifecycleState.resumed:
         ref.read(authControllerProvider.notifier).setUserState(true);
         break;
@@ -53,8 +53,6 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
       case AppLifecycleState.detached:
       case AppLifecycleState.inactive:
         ref.read(authControllerProvider.notifier).setUserState(false);
-        break;
-      case AppLifecycleState.hidden:
         break;
     }
   }
@@ -194,7 +192,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                     _sideMenuKey.currentState?.closeSideMenu();
                   },
                   iconPath: AppAssets.chatIconNew,
-                  pageName: 'blindchat',
+                  pageName: 'findmypal',
                 ),
                 NavigationPageTile(
                   onPageTap: () {
@@ -202,7 +200,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                     _sideMenuKey.currentState?.closeSideMenu();
                   },
                   iconPath: AppAssets.infoIconNew,
-                  pageName: 'resource',
+                  pageName: 'resources',
                 ),
                 NavigationPageTile(
                   onPageTap: () {
