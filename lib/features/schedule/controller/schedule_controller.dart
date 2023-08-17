@@ -17,20 +17,17 @@ class ScheduleController extends ChangeNotifier {
   // This is the dummy data for schedules,
   // will use it to upload on Firebase FireStore.
   final List<ScheduleModel> scheduleModels = [
-    ScheduleModel(scheduleId: '0', dayDate: DateTime(2023, 8, 19), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '1', dayDate: DateTime(2023, 8, 20), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '2', dayDate: DateTime(2023, 8, 21), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '3', dayDate: DateTime(2023, 8, 22), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '4', dayDate: DateTime(2023, 8, 23), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '5', dayDate: DateTime(2023, 8, 24), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '6', dayDate: DateTime(2023, 8, 25), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '7', dayDate: DateTime(2023, 8, 26), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '8', dayDate: DateTime(2023, 8, 27), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '9', dayDate: DateTime(2023, 8, 28), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '10', dayDate: DateTime(2023, 8, 29), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '11', dayDate: DateTime(2023, 8, 30), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '12', dayDate: DateTime(2023, 8, 31), dayEvents: eventModels),
-    ScheduleModel(scheduleId: '13', dayDate: DateTime(2023, 6, 17), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '14', dayDate: DateTime(2023, 8, 19), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '15', dayDate: DateTime(2023, 8, 20), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '16', dayDate: DateTime(2023, 8, 21), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '17', dayDate: DateTime(2023, 8, 22), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '18', dayDate: DateTime(2023, 8, 23), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '19', dayDate: DateTime(2023, 8, 24), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '20', dayDate: DateTime(2023, 8, 25), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '21', dayDate: DateTime(2023, 8, 26), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '22', dayDate: DateTime(2023, 8, 27), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '23', dayDate: DateTime(2023, 8, 28), dayEvents: eventModels),
+    ScheduleModel(scheduleId: '24', dayDate: DateTime(2023, 8, 29), dayEvents: eventModels),
   ];
 
 

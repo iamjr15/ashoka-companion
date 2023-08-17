@@ -42,6 +42,8 @@ class ChatBotSendController extends StateNotifier<bool> {
     final result =await _chatBotApiService.sendMessageSonic(
         message: msg,);
     result.fold((l) {
+      debugPrintStack(stackTrace: l.stackTrace);
+      debugPrint(l.message);
       state = false;
       showAwesomeSnackBar(
           context: context,

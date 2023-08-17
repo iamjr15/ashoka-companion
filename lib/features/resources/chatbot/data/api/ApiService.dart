@@ -58,7 +58,7 @@ class ChatBotApiService {
       {required String message}) async {
     try {
       var headers = {
-        'Accept-Encoding': 'gzip, deflate',
+        'Accept-Encoding': 'application/json',
         'Connection': 'keep-alive',
         'Content-Type': 'application/json',
         'User-Agent': 'python-requests/2.28.1',

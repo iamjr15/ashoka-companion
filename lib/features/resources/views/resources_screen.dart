@@ -26,7 +26,7 @@ class _ResourcesScreenState extends State<ResourcesScreen> {
               height: 183.h,
             ),
             Text(
-              'We’ve got you covered with our resources!',
+              'we’ve got you covered with our resources!',
               style: getBoldStyle(fontSize: MyFonts.size28),
             ),
             SizedBox(

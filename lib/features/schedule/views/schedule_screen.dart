@@ -113,16 +113,19 @@ class _ScheduleScreenState extends ConsumerState<ScheduleScreen> {
                         /// Here we are checking if we have any  schedule for today or not,
                         /// if no schedule found, we tell the user that there is no schedule for this day.
 
-                        scheduleNotifierCtr.todaysSchedule?.dayDate == null ? Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(height: 200.h,),
-                            const Center(
-                              child: Text('No Schedules for this day!'),
-                            ),
-                          ],
-                        ):
+                        scheduleNotifierCtr.todaysSchedule?.dayDate == null ? Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: 200.h),
+                              const Text(
+                                'you probably either have a class \n or holiday today :)',
+                                textAlign: TextAlign.center, // Aligns the text content within the text widget
+                              ),
+                            ],
+                          ),
+                        ) :
 
                         /// If we have schedule for today, we simply show the schedule widget.
                         const Center(
