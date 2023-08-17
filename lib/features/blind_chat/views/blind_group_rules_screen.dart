@@ -87,10 +87,10 @@ class BlindGroupRulesScreen extends StatelessWidget {
               ruleText: 'keep it respectful and kind',
             ),
             const RuleTile(
-              ruleText: 'avoid offensive language, hate speech, bullying, or any form of harassment',
+              ruleText: 'avoid offensive language, hate speech, bullying,\n or any form of harassment',
             ),
             const RuleTile(
-              ruleText: 'do not share or engage in discussions about sensitive topics that could be hurtful to others',
+              ruleText: 'do not share or engage in discussions about sensitive \n topics that could be hurtful to others',
             ),
             SizedBox(
               height: 120.h,

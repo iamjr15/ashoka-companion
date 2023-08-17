@@ -36,7 +36,7 @@ class NavigationController extends ChangeNotifier {
   List<String> appbarHeadings = [
     'my profile',
     'SCHEDULE',
-    'findmypal',
+    'blindchat',
     'RESOURCES',
     'CREDITS',
   ];

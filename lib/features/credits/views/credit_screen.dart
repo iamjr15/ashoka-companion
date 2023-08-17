@@ -36,7 +36,7 @@ class CreditScreen extends StatelessWidget {
             /// Credits Card Widget
             CreditWidget(
               imagePath: AppAssets.jigyansuImage,
-              smallSubTitle: 'Computer Science',
+              smallSubTitle: 'Ashoka Tech Consulting Initiative',
               title: 'Jigyansu Rout , UG24, Computer Science',
               subtitle: 'App Development + Design',
               onTap: () {
@@ -44,7 +44,7 @@ class CreditScreen extends StatelessWidget {
               },
             ),
             CreditWidget(
-              smallSubTitle: 'Psychology',
+              smallSubTitle: 'Ashoka Tech Consulting Initiative',
               imagePath: AppAssets.tanishaImage,
               title: 'Tanisha Raghav , UG24, Psychology',
               subtitle: 'Design + App Architecture',
@@ -55,7 +55,7 @@ class CreditScreen extends StatelessWidget {
               },
             ),
             CreditWidget(
-              smallSubTitle: 'Computer Science',
+              smallSubTitle: 'Ashoka Tech Consulting Initiative',
               imagePath: AppAssets.hazimImage,
               title: 'Hazim Bin Fayaz, UG24, Computer Science',
               subtitle: 'Ashoka Assist + Resource Collation',

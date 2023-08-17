@@ -42,7 +42,7 @@ class ThanksWidget extends StatelessWidget {
             height: 20.h,
           ),
           Text(
-            'Mrs. Anu Batra & the Ashoka IT Team',
+            'Mrs. Anu Batra, Mr. Sunil Kataria & the Ashoka IT Team',
             style: getRegularStyle(
                 fontSize: MyFonts.size14, color: MyColors.newBlackColor),
           ),
