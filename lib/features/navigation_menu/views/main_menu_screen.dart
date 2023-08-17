@@ -45,7 +45,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    switch(state){
+    switch (state) {
       case AppLifecycleState.resumed:
         ref.read(authControllerProvider.notifier).setUserState(true);
         break;
@@ -150,7 +150,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   height: 38.h,
                 ),
                 Text(
-                  'hello $name!',
+                  'hello ${name.toLowerCase()}!',
                   style: getBoldStyle(
                     color: MyColors.textColor,
                     fontSize: MyFonts.size20,
