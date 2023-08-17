@@ -48,7 +48,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
     /// Here we specifically look for interests.
     if ((interests.isEmpty)) {
       const msg =
-          'Your interests are not set, please setup interests in "my profile" to start';
+          'Your interests are not set, please setup interests in "my profile" to start. Make sure you only add 6 interests or less.';
       showAwesomeSnackBar(
           context: context,
           title: 'Interest Not Set',
