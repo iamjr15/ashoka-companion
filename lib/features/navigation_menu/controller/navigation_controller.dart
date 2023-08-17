@@ -27,7 +27,8 @@ class NavigationController extends ChangeNotifier {
   List<Color> screenColors = [
     MyColors.newYellowColor,
     MyColors.newYellowColor,
-    MyColors.newPinkColor,
+    // MyColors.newPinkColor,
+    Colors.transparent,
     MyColors.newYellowColor,
     MyColors.newPinkColor,
   ];

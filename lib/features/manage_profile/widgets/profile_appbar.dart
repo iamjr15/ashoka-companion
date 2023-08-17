@@ -9,19 +9,21 @@ import '../../../commons/common_imports/common_libs.dart';
 import '../../../utils/constants/font_manager.dart';
 
 class ProfileAppBar extends StatelessWidget {
-  const ProfileAppBar(
-
-      {Key? key, required this.subtitle, this.verticalPadding, required this.onBackTap,})
-      : super(key: key);
+  const ProfileAppBar({
+    Key? key,
+    required this.subtitle,
+    this.verticalPadding,
+    required this.onBackTap,
+  }) : super(key: key);
   final String subtitle;
   final double? verticalPadding;
   final VoidCallback onBackTap;
 
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30.w, vertical:verticalPadding?? 40.h),
+      padding: EdgeInsets.symmetric(
+          horizontal: 30.w, vertical: verticalPadding ?? 40.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,7 +31,7 @@ class ProfileAppBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-             GestureDetector(
+              GestureDetector(
                 onTap: onBackTap,
                 child: Image.asset(
                   AppAssets.backArrowNew,
@@ -38,16 +40,16 @@ class ProfileAppBar extends StatelessWidget {
                 ),
               ),
               Text(
-               'my profile',
+                'my profile',
                 style: getSemiBoldStyle(
                     fontSize: MyFonts.size20, color: MyColors.black),
               ),
               GestureDetector(
                   child: Image.asset(
-                    AppAssets.menuIconNew,
-                    height: 36.h,
-                    width: 51.w,
-                  )),
+                AppAssets.menuIconNew,
+                height: 36.h,
+                width: 51.w,
+              )),
             ],
           ),
           padding20,
@@ -56,9 +58,7 @@ class ProfileAppBar extends StatelessWidget {
             child: Text(
               subtitle,
               style: getExtraBoldStyle(
-                  fontSize: MyFonts.size16,
-                  color: MyColors.newPinkColor
-              ),
+                  fontSize: MyFonts.size16, color: MyColors.newPinkColor),
             ),
           ),
         ],

@@ -13,20 +13,23 @@ import '../widgets/online_bar.dart';
 class BlindChatHomeScreen extends ConsumerWidget {
   const BlindChatHomeScreen({Key? key}) : super(key: key);
 
-
   /// Method to start the chat.
   onSwipe(WidgetRef ref, BuildContext context) {
     final authNotifierProvider = ref.watch(authNotifierCtr);
+
     /// Fetching instagram handle
     String instagramHandle =
         authNotifierProvider.userModel?.instagramHandle ?? '';
+
     /// Fetching and saving interests from User Model
     List<String> interests = authNotifierProvider.userModel?.interests ?? [];
+
     /// Checking if the handle or interests are not empty,
     /// if any of these are null , we insist to first update
     /// the profile and then come back for the chat.
     if (instagramHandle == '' && interests.isEmpty) {
-      const msg = 'Please setup interests and instagram handle in "my profile" to start!';
+      const msg =
+          'Please setup interests and instagram handle in "my profile" to start!';
       showAwesomeSnackBar(
           context: context,
           title: 'Profile Not Set',
@@ -34,6 +37,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
           type: ContentType.failure);
       return;
     }
+
     /// Here we specifically look for instagram handle
     if (instagramHandle == '') {
       const msg =
@@ -45,6 +49,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
           type: ContentType.failure);
       return;
     }
+
     /// Here we specifically look for interests.
     if ((interests.isEmpty)) {
       const msg =

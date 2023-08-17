@@ -41,30 +41,33 @@ class CommonAppbar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              title == 'SCHEDULE'?
-             GestureDetector(
-                onTap: () async {
-                 Navigator.pushNamed(context, AppRoutes.qrCodeScreen);
-                },
-                child: Image.asset(
-                  AppAssets.qrCode,
-                  width: 38.w,
-                  height: 38.h,
-                ),
-              ): Consumer(builder: (context, ref, child) {
-                return GestureDetector(
-                  onTap: () async {
-                    final navCtr = ref.watch(navigationController);
-                    navCtr.setIndex(1);
-                  },
-                  child: Image.asset(
-                    AppAssets.backArrowNew,
-                    width: 38.w,
-                    height: 38.h,
-                  ),
-                );
-              }),
-              if (title == 'blindchat' || title == 'my profile') ...[
+              title == 'SCHEDULE'
+                  ? GestureDetector(
+                      onTap: () async {
+                        Navigator.pushNamed(context, AppRoutes.qrCodeScreen);
+                      },
+                      child: Image.asset(
+                        AppAssets.qrCode,
+                        width: 38.w,
+                        height: 38.h,
+                      ),
+                    )
+                  : Consumer(builder: (context, ref, child) {
+                      return GestureDetector(
+                        onTap: () async {
+                          final navCtr = ref.watch(navigationController);
+                          navCtr.setIndex(1);
+                        },
+                        child: Image.asset(
+                          AppAssets.backArrowNew,
+                          width: 38.w,
+                          height: 38.h,
+                        ),
+                      );
+                    }),
+              if (title == 'blindchat' ||
+                  title == 'my profile' ||
+                  title == 'findmypal') ...[
                 Text(
                   title,
                   style: getSemiBoldStyle(
@@ -85,7 +88,7 @@ class CommonAppbar extends StatelessWidget {
           SizedBox(
             height: 30.h,
           ),
-          if (!(title == 'blindchat'|| title == 'my profile')) ...[
+          if (!(title == 'blindchat' || title == 'my profile')) ...[
             Text(
               title,
               style: getExtraBoldStyle(
