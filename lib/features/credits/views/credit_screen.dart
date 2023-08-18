@@ -38,7 +38,7 @@ class CreditScreen extends StatelessWidget {
               imagePath: AppAssets.jigyansuImage,
               smallSubTitle: 'Ashoka Tech Consulting Initiative',
               title: 'Jigyansu Rout , UG24, Computer Science',
-              subtitle: 'App Development + Design',
+              subtitle: 'Flutter App Development + Interface Design',
               onTap: () {
                 launchURL(Url: "https://www.linkedin.com/in/iamjr15/");
               },
@@ -47,7 +47,7 @@ class CreditScreen extends StatelessWidget {
               smallSubTitle: 'Ashoka Tech Consulting Initiative',
               imagePath: AppAssets.tanishaImage,
               title: 'Tanisha Raghav , UG24, Psychology',
-              subtitle: 'Design + App Architecture',
+              subtitle: 'Interface Design + App Architecture',
               onTap: () {
                 launchURL(
                     Url:
@@ -58,7 +58,7 @@ class CreditScreen extends StatelessWidget {
               smallSubTitle: 'Ashoka Tech Consulting Initiative',
               imagePath: AppAssets.hazimImage,
               title: 'Hazim Bin Fayaz, UG24, Computer Science',
-              subtitle: 'Ashoka Assist + Resource Collation',
+              subtitle: 'NLP Bot-Dev + GeoSpatial & Informatics',
               onTap: () {
                 launchURL(Url: "https://www.linkedin.com/in/hazimbf/");
               },

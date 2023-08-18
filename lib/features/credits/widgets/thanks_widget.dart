@@ -34,7 +34,7 @@ class ThanksWidget extends StatelessWidget {
             height: 20.h,
           ),
           Text(
-            'Mrs. Pooja Manaktala & the Office of Student Affairs',
+            'Pooja Manaktala & the Office of Student Affairs',
             style: getRegularStyle(
                 fontSize: MyFonts.size14, color: MyColors.newBlackColor),
           ),
@@ -42,7 +42,7 @@ class ThanksWidget extends StatelessWidget {
             height: 20.h,
           ),
           Text(
-            'Mrs. Anu Batra, Mr. Sunil Kataria & the Ashoka IT Team',
+            'Anu Batra, Sunil Kataria & the Ashoka IT Team',
             style: getRegularStyle(
                 fontSize: MyFonts.size14, color: MyColors.newBlackColor),
           ),
@@ -50,7 +50,7 @@ class ThanksWidget extends StatelessWidget {
             height: 20.h,
           ),
           Text(
-            'Mr. Saurabh Kumar',
+            'Saurabh Kumar',
             style: getRegularStyle(
                 fontSize: MyFonts.size14, color: MyColors.newBlackColor),
           ),
