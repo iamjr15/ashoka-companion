@@ -32,42 +32,51 @@ class SignInScreen extends StatelessWidget {
             AppAssets.signInBg,
             width: double.infinity,
           ),
-          Spacer(flex: 1,),
+          Spacer(
+            flex: 1,
+          ),
           Image.asset(
             AppAssets.signInShapesNew,
             width: 173.w,
           ),
-          Spacer(flex: 1,),
+          Spacer(
+            flex: 1,
+          ),
           Text(
             'ashoka\norientation\ncompanion',
             textAlign: TextAlign.center,
             style: getBoldSigInHeadingStyle(
                 fontSize: MyFonts.size48, color: MyColors.black),
           ),
-          Spacer(flex: 2,),
+          Spacer(
+            flex: 2,
+          ),
           Column(
             children: [
-              SignInCustomButton(
-                onPressed: () {
-                  Navigator.pushNamed(
-                      context, AppRoutes.staffPortalSignInScreen);
-                },
-                buttonText: 'staff sign in',
-                backColor: MyColors.signInStaffButton,
-                borderRadius: 0.r,
-                buttonHeight: 84.h,
-              ),
+              // SignInCustomButton(           -------------Staff Login Removed
+              //   onPressed: () {
+              //     Navigator.pushNamed(
+              //         context, AppRoutes.staffPortalSignInScreen);
+              //   },
+              //   buttonText: 'staff sign in',
+              //   backColor: MyColors.signInStaffButton,
+              //   borderRadius: 0.r,
+              //   buttonHeight: 84.h,
+              // ),
               Consumer(builder: (context, ref, child) {
                 return SignInCustomButton(
                   onPressed: () => studentGoogleSignIn(ref, context),
-                  buttonText: 'student sign in',
+                  buttonText: 'sign in with ashoka email',
                   backColor: MyColors.signInStudentButton,
-                  borderRadius: 0.r,
+                  borderRadius: 42.r,
                   isLoading: ref.watch(authControllerProvider),
                   buttonHeight: 84.h,
                 );
               }),
             ],
+          ),
+          const Spacer(
+            flex: 2,
           ),
         ],
       ),

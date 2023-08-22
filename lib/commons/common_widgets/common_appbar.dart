@@ -41,7 +41,7 @@ class CommonAppbar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              title == 'SCHEDULE'
+              title == 'SCHEDULE' || title == 'home'
                   ? GestureDetector(
                       onTap: () async {
                         Navigator.pushNamed(context, AppRoutes.qrCodeScreen);
@@ -56,7 +56,7 @@ class CommonAppbar extends StatelessWidget {
                       return GestureDetector(
                         onTap: () async {
                           final navCtr = ref.watch(navigationController);
-                          navCtr.setIndex(1);
+                          navCtr.setIndex(3);
                         },
                         child: Image.asset(
                           AppAssets.backArrowNew,
@@ -67,7 +67,8 @@ class CommonAppbar extends StatelessWidget {
                     }),
               if (title == 'blindchat' ||
                   title == 'my profile' ||
-                  title == 'findmypal') ...[
+                  title == 'findmypal' ||
+                  title == 'home') ...[
                 Text(
                   title,
                   style: getSemiBoldStyle(

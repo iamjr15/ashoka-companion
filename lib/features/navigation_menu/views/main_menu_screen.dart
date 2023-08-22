@@ -170,7 +170,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   ),
                 ),
                 SizedBox(
-                  height: 70.h,
+                  height: 40.h, // -------height Reduced from 70 to 40
                 ),
                 NavigationPageTile(
                   onPageTap: () {
@@ -180,14 +180,14 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   iconPath: AppAssets.profileIcon,
                   pageName: 'my profile',
                 ),
-                NavigationPageTile(
-                  onPageTap: () {
-                    navCtr.setIndex(1);
-                    _sideMenuKey.currentState?.closeSideMenu();
-                  },
-                  iconPath: AppAssets.calanderIconNew,
-                  pageName: 'schedule',
-                ),
+                // NavigationPageTile(            ----------Schedule Item Removed From Side Menu
+                //   onPageTap: () {
+                //     navCtr.setIndex(1);
+                //     _sideMenuKey.currentState?.closeSideMenu();
+                //   },
+                //   iconPath: AppAssets.calanderIconNew,
+                //   pageName: 'schedule',
+                // ),
                 NavigationPageTile(
                   onPageTap: () {
                     navCtr.setIndex(2);
@@ -196,14 +196,15 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   iconPath: AppAssets.chatIconNew,
                   pageName: 'findmypal',
                 ),
-                NavigationPageTile(
-                  onPageTap: () {
-                    navCtr.setIndex(3);
-                    _sideMenuKey.currentState?.closeSideMenu();
-                  },
-                  iconPath: AppAssets.infoIconNew,
-                  pageName: 'resources',
-                ),
+                // NavigationPageTile(
+                //                             // ----------Schedule Item Removed From Side Menu
+                //   onPageTap: () {
+                //     navCtr.setIndex(3);
+                //     _sideMenuKey.currentState?.closeSideMenu();
+                //   },
+                //   iconPath: AppAssets.infoIconNew,
+                //   pageName: 'resources',
+                // ),
                 NavigationPageTile(
                   onPageTap: () {
                     navCtr.setIndex(4);

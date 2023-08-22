@@ -17,7 +17,8 @@ class ManageInterestsScreen extends ConsumerStatefulWidget {
   const ManageInterestsScreen({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<ManageInterestsScreen> createState() => _ManageInterestsScreenState();
+  ConsumerState<ManageInterestsScreen> createState() =>
+      _ManageInterestsScreenState();
 }
 
 class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
@@ -29,16 +30,15 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
     initialization();
   }
 
-  initialization(){
+  initialization() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       final authNotifierProvider = ref.read(authNotifierCtr);
-      final manageInterestsCtr  = ref.read(manageInterestsController);
+      final manageInterestsCtr = ref.read(manageInterestsController);
       UserModel userModel = authNotifierProvider.userModel!;
 
       manageInterestsCtr.setInitialInterests(userModel.interests);
     });
   }
-
 
   @override
   void dispose() {
@@ -49,8 +49,8 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: ()async{
-        final manageInterestsCtr  = ref.watch(manageInterestsController);
+      onWillPop: () async {
+        final manageInterestsCtr = ref.watch(manageInterestsController);
         manageInterestsCtr.clearInterests();
         return true;
       },
@@ -65,37 +65,36 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
               ),
               ProfileAppBar(
                 subtitle: 'MY INTERESTS',
-                onBackTap: (){
-                  final manageInterestsCtr  = ref.watch(manageInterestsController);
+                onBackTap: () {
+                  final manageInterestsCtr =
+                      ref.watch(manageInterestsController);
                   manageInterestsCtr.clearInterests();
                   Navigator.pop(context);
                 },
               ),
-
               Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: 37.w
-                ),
+                padding: EdgeInsets.symmetric(horizontal: 37.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      constraints: BoxConstraints(
-                          maxWidth: 323.w
-                      ),
+                      constraints: BoxConstraints(maxWidth: 323.w),
                       child: Text(
                         'Select your interests & connect with similar people!',
                         style: getBoldStyle(
                             fontSize: MyFonts.size28,
-                            color: MyColors.textColor
-                        ),
+                            color: MyColors.textColor),
                       ),
                     ),
-                    SizedBox(height: 26.h,),
+                    SizedBox(
+                      height: 26.h,
+                    ),
                     Consumer(
-                      builder: (BuildContext context, WidgetRef ref, Widget? child) {
-                        final manageInterCtr = ref.watch(manageInterestsController);
+                      builder:
+                          (BuildContext context, WidgetRef ref, Widget? child) {
+                        final manageInterCtr =
+                            ref.watch(manageInterestsController);
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -103,32 +102,37 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
                             AddInterestsWidget(
                               controller: _interestCtr,
                               hintText: 'type it out',
-                              onChanged: (val){},
-                              onFieldSubmitted: (val){
+                              onChanged: (val) {},
+                              onFieldSubmitted: (val) {
                                 manageInterCtr.addWriteByHandInterest(val);
                                 _interestCtr.clear();
                               },
-                              onArrowTapped: (){
-                                if(_interestCtr.text.isNotEmpty){
-                                  manageInterCtr.addWriteByHandInterest(_interestCtr.text);
+                              onArrowTapped: () {
+                                if (_interestCtr.text.isNotEmpty) {
+                                  manageInterCtr.addWriteByHandInterest(
+                                      _interestCtr.text);
                                   _interestCtr.clear();
                                 }
                               },
                               obscure: false,
                               label: 'label',
                             ),
-                            SizedBox(height: 26.h,),
+                            SizedBox(
+                              height: 26.h,
+                            ),
                             Align(
                               alignment: Alignment.topLeft,
                               child: Wrap(
                                 alignment: WrapAlignment.start,
                                 children: List.generate(
                                   manageInterCtr.interests.length,
-                                      (index){
-                                    String interest = manageInterCtr.interests[index];
+                                  (index) {
+                                    String interest =
+                                        manageInterCtr.interests[index];
                                     return InterestTile(
-                                      onTap: (){
-                                        manageInterCtr.addSelectedInterest(interest);
+                                      onTap: () {
+                                        manageInterCtr
+                                            .addSelectedInterest(interest);
                                       },
                                       interestName: interest,
                                     );
@@ -142,11 +146,14 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
                                 alignment: WrapAlignment.start,
                                 children: List.generate(
                                   manageInterCtr.writeByHandInterests.length,
-                                      (index){
-                                    String interest = manageInterCtr.writeByHandInterests[index];
+                                  (index) {
+                                    String interest = manageInterCtr
+                                        .writeByHandInterests[index];
                                     return RemoveableInterestTile(
-                                      onTap: (){
-                                        manageInterCtr.removeWriteByHandInterest(interest);
+                                      onTap: () {
+                                        manageInterCtr
+                                            .removeWriteByHandInterest(
+                                                interest);
                                       },
                                       interestName: interest,
                                     );
@@ -154,13 +161,16 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(height: 20.h,),
+                            SizedBox(
+                              height: 20.h,
+                            ),
                             Consumer(
-                              builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                              builder: (BuildContext context, WidgetRef ref,
+                                  Widget? child) {
                                 return CustomArrowButton(
                                   isLoading: ref.watch(authControllerProvider),
                                   buttonText: 'save interests',
-                                  onPressed: ()async {
+                                  onPressed: () async {
                                     await onSaveInterests(ref, context);
                                   },
                                   buttonHeight: 70.h,
@@ -171,7 +181,6 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
                           ],
                         );
                       },
-
                     )
                   ],
                 ),
@@ -183,16 +192,18 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
     );
   }
 
-  onSaveInterests(WidgetRef ref, BuildContext context)async{
-    final manageInterestsCtr  = ref.watch(manageInterestsController);
+  onSaveInterests(WidgetRef ref, BuildContext context) async {
+    final manageInterestsCtr = ref.watch(manageInterestsController);
     final authNotifierProvider = ref.watch(authNotifierCtr);
+
     /// Combining all interests either written by Hand or just Selected!
     manageInterestsCtr.setCombinedInterests(
-        normalInterests: manageInterestsCtr.selectedInterests,
-        writeByHandInterests: manageInterestsCtr.writeByHandInterests,
+      normalInterests: manageInterestsCtr.selectedInterests,
+      writeByHandInterests: manageInterestsCtr.writeByHandInterests,
     );
 
-    if(manageInterestsCtr.combinedInterests.isNotEmpty && (manageInterestsCtr.combinedInterests.length >= 3)){
+    if (manageInterestsCtr.combinedInterests.isNotEmpty &&
+        (manageInterestsCtr.combinedInterests.length >= 6)) {
       UserModel userModel = authNotifierProvider.userModel!;
       final authCtr = ref.watch(authControllerProvider.notifier);
       await authCtr.updateCurrentUserInfo(
@@ -201,19 +212,20 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
           instagramHandle: userModel.instagramHandle,
           userModel: userModel);
 
-      ref.watch(fetchUserByIdProvider(authNotifierProvider.userModel!.uid)).when(
-        data: (userModel){
-          authNotifierProvider.setUserModelData(userModel);
-        },
-        error: (error, st){
-          debugPrintStack(stackTrace: st);
-          debugPrint(error.toString());
-        },
-        loading: (){},
-      );
-
-    }else{
-      showToast(msg: 'please select at-least 3 interests!');
+      ref
+          .watch(fetchUserByIdProvider(authNotifierProvider.userModel!.uid))
+          .when(
+            data: (userModel) {
+              authNotifierProvider.setUserModelData(userModel);
+            },
+            error: (error, st) {
+              debugPrintStack(stackTrace: st);
+              debugPrint(error.toString());
+            },
+            loading: () {},
+          );
+    } else {
+      showToast(msg: 'please select at-least 1 interests!');
     }
   }
 }

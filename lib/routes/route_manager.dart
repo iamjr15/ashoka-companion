@@ -10,6 +10,7 @@ import 'package:gojek_university_app/features/blind_chat/views/blind_search_time
 import 'package:gojek_university_app/features/blind_chat/views/blind_timeup_screen.dart';
 import 'package:gojek_university_app/features/blind_chat/views/friend_searching_screen.dart';
 import 'package:gojek_university_app/features/manage_profile/views/instagram_handle_screen.dart';
+import 'package:gojek_university_app/features/manage_profile/views/my_profile_screen.dart';
 import 'package:gojek_university_app/features/resources/chatbot/view/resource_chat_bot_screen.dart';
 import 'package:gojek_university_app/features/resources/views/campus_map_screen.dart';
 import 'package:gojek_university_app/features/resources/views/webview_screen.dart';
@@ -56,6 +57,7 @@ class AppRoutes {
   static const String campusMapScreen = '/campusMapScreen';
   static const String webViewScreen = '/webViewScreen';
   static const String resourceChatBotScreen = '/ResourceChatBotScreen';
+  static const String myProfileScreen = '/MyProfileScreen';
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -71,7 +73,8 @@ class AppRoutes {
         return _buildRoute(const AttendenceTrackStaffStreen());
       case staffCaptureAttendenceScreen:
         return _buildRoute(const CaptureAttendenceScreen());
-
+      case myProfileScreen:
+        return _buildRoute(const MyProfileScreen());
       case scheduleOnClickScreen:
         final arguments = settings.arguments as Map<String, dynamic>;
         return _buildRoute(

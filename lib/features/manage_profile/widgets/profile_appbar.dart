@@ -44,12 +44,16 @@ class ProfileAppBar extends StatelessWidget {
                 style: getSemiBoldStyle(
                     fontSize: MyFonts.size20, color: MyColors.black),
               ),
-              GestureDetector(
-                  child: Image.asset(
-                AppAssets.menuIconNew,
-                height: 36.h,
-                width: 51.w,
-              )),
+              (subtitle == 'MY INTERESTS' || subtitle == 'INSTAGRAM HANDLE')
+                  ? const SizedBox(
+                      width: 50,
+                    )
+                  : GestureDetector(
+                      child: Image.asset(
+                      AppAssets.menuIconNew,
+                      height: 36.h,
+                      width: 51.w,
+                    )),
             ],
           ),
           padding20,

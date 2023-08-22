@@ -29,7 +29,8 @@ class NavigationController extends ChangeNotifier {
     MyColors.newYellowColor,
     // MyColors.newPinkColor,
     Colors.transparent,
-    MyColors.newYellowColor,
+    // MyColors.newYellowColor,
+    Colors.transparent,
     MyColors.newPinkColor,
   ];
 
@@ -38,12 +39,12 @@ class NavigationController extends ChangeNotifier {
     'my profile',
     'SCHEDULE',
     'findmypal',
-    'RESOURCES',
+    'home',
     'CREDITS',
   ];
 
   /// Index for Side Navigation Menu Bar
-  int _index = 1;
+  int _index = 3;
   int get index => _index;
   setIndex(int id) {
     _index = id;

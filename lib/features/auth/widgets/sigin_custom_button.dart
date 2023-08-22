@@ -13,7 +13,8 @@ class SignInCustomButton extends StatelessWidget {
     this.buttonWidth,
     this.buttonHeight,
     this.fontSize,
-    this.padding, this.borderRadius,
+    this.padding,
+    this.borderRadius,
   });
   final Function()? onPressed;
   final String buttonText;
@@ -30,13 +31,13 @@ class SignInCustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: buttonHeight,
+      width: MediaQuery.of(context).size.width - 80,
       child: RawMaterialButton(
         elevation: 2,
         fillColor: backColor ?? Theme.of(context).primaryColor,
         onPressed: onPressed,
-
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(borderRadius??20.r),
+          borderRadius: BorderRadius.circular(borderRadius ?? 20.r),
         ),
         child: SizedBox(
           // padding: EdgeInsets.symmetric(vertical: 10.h),
@@ -45,14 +46,14 @@ class SignInCustomButton extends StatelessWidget {
           child: Center(
               child: isLoading
                   ? const LoadingWidget(
-                color: MyColors.white,
-              )
+                      color: MyColors.white,
+                    )
                   : Text(
-                buttonText.toUpperCase(),
-                style: getSemiBoldStyle(
-                    color: textColor ?? Colors.white,
-                    fontSize: fontSize ?? MyFonts.size20),
-              )),
+                      buttonText,
+                      style: getSemiBoldStyle(
+                          color: textColor ?? Colors.white,
+                          fontSize: fontSize ?? MyFonts.size20),
+                    )),
         ),
       ),
     );
