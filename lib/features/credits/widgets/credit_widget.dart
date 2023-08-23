@@ -19,69 +19,74 @@ class CreditWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(23.h),
-      margin: EdgeInsets.symmetric(vertical: 25.h),
-      decoration: BoxDecoration(
-        color: MyColors.newLightGreyColor,
-        borderRadius: BorderRadius.circular(15.r),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          // CircleAvatar(
-          //   radius: 32.r,
-          //   child: Image.asset(
-          //     imagePath,
-          //     width: 65.w,
-          //     height: 65.h,
-          //   ),
-          // ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(32.0),
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
-              width: 65,
-              height: 65,
+    return InkWell(
+      onTap: () {
+        onTap();
+      },
+      child: Container(
+        padding: EdgeInsets.all(23.h),
+        margin: EdgeInsets.symmetric(vertical: 25.h),
+        decoration: BoxDecoration(
+          color: MyColors.newLightGreyColor,
+          borderRadius: BorderRadius.circular(15.r),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            // CircleAvatar(
+            //   radius: 32.r,
+            //   child: Image.asset(
+            //     imagePath,
+            //     width: 65.w,
+            //     height: 65.h,
+            //   ),
+            // ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(32.0),
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+                width: 65,
+                height: 65,
+              ),
             ),
-          ),
-          SizedBox(
-            width: 18.h,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                constraints: BoxConstraints(maxWidth: 213.w),
-                child: Text(
-                  title,
-                  style: getSemiBoldStyle(
-                      fontSize: MyFonts.size20, color: MyColors.black),
+            SizedBox(
+              width: 18.h,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  constraints: BoxConstraints(maxWidth: 213.w),
+                  child: Text(
+                    title,
+                    style: getSemiBoldStyle(
+                        fontSize: MyFonts.size20, color: MyColors.black),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 8.h,
-              ),
-              Text(
-                smallSubTitle,
-                style: getMediumStyle(
-                    fontSize: MyFonts.size12,
-                    color: MyColors.newTextBlackSecondaryColor),
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              Text(
-                subtitle,
-                style: getMediumStyle(
-                    fontSize: MyFonts.size12,
-                    color: MyColors.newTextBlackSecondaryColor),
-              )
-            ],
-          )
-        ],
+                SizedBox(
+                  height: 8.h,
+                ),
+                Text(
+                  smallSubTitle,
+                  style: getMediumStyle(
+                      fontSize: MyFonts.size12,
+                      color: MyColors.newTextBlackSecondaryColor),
+                ),
+                SizedBox(
+                  height: 3.h,
+                ),
+                Text(
+                  subtitle,
+                  style: getMediumStyle(
+                      fontSize: MyFonts.size12,
+                      color: MyColors.newTextBlackSecondaryColor),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

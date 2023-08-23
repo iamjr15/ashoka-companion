@@ -203,7 +203,7 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
     );
 
     if (manageInterestsCtr.combinedInterests.isNotEmpty &&
-        (manageInterestsCtr.combinedInterests.length >= 6)) {
+        (manageInterestsCtr.combinedInterests.length == 6)) {
       UserModel userModel = authNotifierProvider.userModel!;
       final authCtr = ref.watch(authControllerProvider.notifier);
       await authCtr.updateCurrentUserInfo(
@@ -225,7 +225,7 @@ class _ManageInterestsScreenState extends ConsumerState<ManageInterestsScreen> {
             loading: () {},
           );
     } else {
-      showToast(msg: 'please select at-least 1 interests!');
+      showToast(msg: 'Please select 6 interests!');
     }
   }
 }

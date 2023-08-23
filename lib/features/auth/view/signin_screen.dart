@@ -16,7 +16,7 @@ class SignInScreen extends StatelessWidget {
 
   studentGoogleSignIn(WidgetRef ref, BuildContext context) {
     final navCtr = ref.read(navigationController);
-    navCtr.setIndex(1);
+    navCtr.setIndex(3);
     final authCtr = ref.read(authControllerProvider.notifier);
     authCtr.signInWithGoogle(context);
   }
