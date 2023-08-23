@@ -31,7 +31,8 @@ class NavigationController extends ChangeNotifier {
     Colors.transparent,
     // MyColors.newYellowColor,
     Colors.transparent,
-    MyColors.newPinkColor,
+    // MyColors.newPinkColor,
+    Colors.transparent,
   ];
 
   /// List of Headings for all screens.
