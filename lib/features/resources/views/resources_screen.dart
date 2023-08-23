@@ -44,7 +44,7 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
               height: 74.h,
             ),
             SizedBox(
-              height: 650.h,
+              height: 750.h,
               child: Stack(
                 children: [
                   Positioned(
