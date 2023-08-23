@@ -86,6 +86,7 @@ class AppAssets {
   static const String manageInterestIcon =
       '$newImagesPath/manage_interests.png';
   static const String profileIcon = '$newImagesPath/profile.png';
+  static const String homeIcon = '$newImagesPath/home.png';
   static const String instaConnectedIcon = '$newImagesPath/insta_connected.png';
   static const String instaNotConnectedIcon =
       '$newImagesPath/insta_not_connected.png';

@@ -1,7 +1,6 @@
 import '../../../commons/common_imports/common_libs.dart';
 import '../../../utils/constants/font_manager.dart';
 
-
 /// We are using this Widget Class in the Side Navigation Menu Bar.
 class NavigationPageTile extends StatelessWidget {
   final String pageName;
@@ -32,10 +31,15 @@ class NavigationPageTile extends StatelessWidget {
                 fontSize: MyFonts.size18,
               ),
             ),
-
-            if(isShowIcon)...[
-              SizedBox(width: 25.w,),
-              Image.asset(iconPath, height: 26.h, width: 26.w,)
+            if (isShowIcon) ...[
+              SizedBox(
+                width: 25.w,
+              ),
+              Image.asset(
+                iconPath,
+                height: 26.h,
+                width: 26.w,
+              )
             ]
           ],
         ),

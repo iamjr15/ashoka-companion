@@ -176,7 +176,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                     navCtr.setIndex(3);
                     _sideMenuKey.currentState?.closeSideMenu();
                   },
-                  iconPath: AppAssets.infoIconNew,
+                  iconPath: AppAssets.homeIcon,
                   pageName: 'home',
                 ),
                 NavigationPageTile(
