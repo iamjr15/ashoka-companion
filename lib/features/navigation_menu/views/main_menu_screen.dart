@@ -173,6 +173,15 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   height: 40.h, // -------height Reduced from 70 to 40
                 ),
                 NavigationPageTile(
+                  // ----------Schedule Item Removed From Side Menu
+                  onPageTap: () {
+                    navCtr.setIndex(3);
+                    _sideMenuKey.currentState?.closeSideMenu();
+                  },
+                  iconPath: AppAssets.infoIconNew,
+                  pageName: 'home',
+                ),
+                NavigationPageTile(
                   onPageTap: () {
                     navCtr.setIndex(0);
                     _sideMenuKey.currentState?.closeSideMenu();
@@ -196,15 +205,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
                   iconPath: AppAssets.chatIconNew,
                   pageName: 'findmypal',
                 ),
-                // NavigationPageTile(
-                //                             // ----------Schedule Item Removed From Side Menu
-                //   onPageTap: () {
-                //     navCtr.setIndex(3);
-                //     _sideMenuKey.currentState?.closeSideMenu();
-                //   },
-                //   iconPath: AppAssets.infoIconNew,
-                //   pageName: 'resources',
-                // ),
+
                 NavigationPageTile(
                   onPageTap: () {
                     navCtr.setIndex(4);
