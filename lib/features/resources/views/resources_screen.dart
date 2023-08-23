@@ -61,7 +61,7 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     ),
                   ),
                   Positioned(
-                    top: 110,
+                    top: 105,
                     child: ResourcesWidget(
                       imagePath: AppAssets.resourcePinkBox,
                       imageColor: MyColors.newBlueColor,
@@ -74,7 +74,7 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     ),
                   ),
                   Positioned(
-                    top: 220,
+                    top: 213,
                     child: ResourcesWidget(
                       imagePath: AppAssets.resourcePinkBox,
                       imageColor: MyColors.newYellowColor,
@@ -87,7 +87,7 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     ),
                   ),
                   Positioned(
-                    top: 330,
+                    top: 313,
                     child: ResourcesWidget(
                       imagePath: AppAssets.resourcePinkBox,
                       imageColor: MyColors.newPinkResourceBoxColor,
@@ -99,7 +99,7 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     ),
                   ),
                   Positioned(
-                    top: 440,
+                    top: 413,
                     child: Consumer(
                       builder:
                           (BuildContext context, WidgetRef ref, Widget? child) {
