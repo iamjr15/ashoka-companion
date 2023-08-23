@@ -36,16 +36,16 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     initialization();
   }
 
+
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
-
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
-    switch (state) {
+    switch(state){
       case AppLifecycleState.resumed:
         ref.read(authControllerProvider.notifier).setUserState(true);
         break;
@@ -53,8 +53,6 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
       case AppLifecycleState.detached:
       case AppLifecycleState.inactive:
         ref.read(authControllerProvider.notifier).setUserState(false);
-        break;
-      case AppLifecycleState.hidden:
         break;
     }
   }
@@ -97,7 +95,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
   buildMenu() {
     final navCtr = ref.watch(navigationController);
     final authNotifierProvider = ref.watch(authNotifierCtr);
-    String name = authNotifierProvider.userModel?.name ?? 'Richard';
+    String name = authNotifierProvider.userModel?.name ?? 'loading ..';
     String? profilePic = authNotifierProvider.userModel?.profileImage;
     String id = authNotifierProvider.userModel != null
         ? returnIdFromEmail(authNotifierProvider.userModel!.email)
