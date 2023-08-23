@@ -68,9 +68,10 @@ class CommonAppbar extends StatelessWidget {
               if (title == 'blindchat' ||
                   title == 'my profile' ||
                   title == 'findmypal' ||
-                  title == 'home') ...[
+                  title == 'home' ||
+                  title == 'CREDITS') ...[
                 Text(
-                  title,
+                  title.toLowerCase(),
                   style: getSemiBoldStyle(
                       fontSize: MyFonts.size20, color: MyColors.black),
                 ),
