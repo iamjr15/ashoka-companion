@@ -34,6 +34,7 @@ class MyFonts {
   static double size34 = 38.spMin;
   static double size36 = 40.spMin;
   static double size40 = 45.spMin;
+  static double size45 = 56.spMin;
   static double size48 = 55.spMin;
   static double size87 = 92.spMin;
 }

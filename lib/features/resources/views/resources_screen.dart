@@ -30,15 +30,15 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
             ),
             Text(
               'welcome',
-              style: getBoldStyle(fontSize: MyFonts.size28),
+              style: getBoldStyle(fontSize: MyFonts.size40),
             ),
             Text(
               'class of',
-              style: getBoldStyle(fontSize: MyFonts.size28),
+              style: getBoldStyle(fontSize: MyFonts.size40),
             ),
             Text(
-              '${DateFormat('yyyy').format(DateTime.now())} !',
-              style: getBoldStyle(fontSize: MyFonts.size28),
+              '${DateFormat('yyyy').format(DateTime.now())}!',
+              style: getBoldStyle(fontSize: MyFonts.size40),
             ),
             SizedBox(
               height: 74.h,
@@ -52,10 +52,10 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     child: ResourcesWidget(
                       imagePath: AppAssets.resourcePinkBox,
                       imageColor: MyColors.newPinkColor,
-                      title: 'find my pal',
+                      title: 'my profile',
                       onTap: () {
                         final navCtr = ref.watch(navigationController);
-                        navCtr.setIndex(2);
+                        navCtr.setIndex(0);
                       },
                       index: 0,
                     ),
@@ -65,10 +65,10 @@ class _ResourcesScreenState extends ConsumerState<ResourcesScreen> {
                     child: ResourcesWidget(
                       imagePath: AppAssets.resourcePinkBox,
                       imageColor: MyColors.newBlueColor,
-                      title: 'my profile',
+                      title: 'find my pal',
                       onTap: () {
                         final navCtr = ref.watch(navigationController);
-                        navCtr.setIndex(0);
+                        navCtr.setIndex(2);
                       },
                       index: 1,
                     ),
