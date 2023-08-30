@@ -43,7 +43,7 @@ class SignInScreen extends StatelessWidget {
             flex: 1,
           ),
           Text(
-            'ashoka\norientation\ncompanion',
+            'the\nashoka\ncompanion',
             textAlign: TextAlign.center,
             style: getBoldSigInHeadingStyle(
                 fontSize: MyFonts.size48, color: MyColors.black),
