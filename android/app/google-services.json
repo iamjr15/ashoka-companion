@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "929335192361",
+    "project_id": "ashokacompanion",
+    "storage_bucket": "ashokacompanion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929335192361:android:3bdbcc796a793c57442538",
+        "android_client_info": {
+          "package_name": "com.ashokacompanion.jigyansurout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929335192361-e11n4anni02krfk8jo1e0ta8b3pj5vl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "72052ec9d06d4fdb577eb37e5b1273724fcddc81"
+          }
+        },
+        {
+          "client_id": "929335192361-fitbnvrg8vgm4lk5v56bbsqrscc74l6c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "cf3cd6c41faf06959684c37853684884e1d9bf0f"
+          }
+        },
+        {
+          "client_id": "929335192361-mmr530nm82lahomeqfqv5jj190lpm1r8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "177489cbf07279a018b21bb34111222d9015181b"
+          }
+        },
+        {
+          "client_id": "929335192361-jhgf6dobsog6s42n2tcb1apd2oiddbsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEi_HB6eNIhNTXDVYmYJ5wYjgaYXRLqXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929335192361-ds24e96r7o6k540sstof21bgn35lpc7f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "929335192361-5omt8el6jduquvs8h0b3dtq9rgohu7sm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ashokacompanion.jigyansurout"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
