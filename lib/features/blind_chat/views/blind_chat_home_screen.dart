@@ -15,6 +15,17 @@ class BlindChatHomeScreen extends ConsumerWidget {
 
   /// Method to start the chat.
   onSwipe(WidgetRef ref, BuildContext context) {
+    //7:00PM
+
+    if (!_checkValidTime()) {
+      showAwesomeSnackBar(
+          context: context,
+          title: 'You can only start matching between 7PM - 10PM everyday',
+          msg: '',
+          type: ContentType.failure);
+      return;
+    }
+
     final authNotifierProvider = ref.watch(authNotifierCtr);
 
     /// Fetching instagram handle
@@ -73,17 +84,36 @@ class BlindChatHomeScreen extends ConsumerWidget {
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(
           gradient: LinearGradient(
-        colors: [
-          MyColors.yellowDarkGradientColor,
-          MyColors.yellowLightGradientColor
-        ],
-        begin: Alignment.bottomCenter,
-        end: Alignment.topCenter,
-      )),
+            colors: [
+              MyColors.yellowDarkGradientColor,
+              MyColors.yellowLightGradientColor
+            ],
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+          )),
       child: Column(
         children: [
           SizedBox(
-            height: 285.h,
+            height: 134.h,
+          ),
+          Container(
+            width: 175.w,
+            height: 44.h,
+            decoration: BoxDecoration(
+              color: MyColors.onlineBarBackgroundColor,
+              borderRadius: BorderRadius.circular(100.r),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 18.w),
+            child: Center(
+              child: Text(
+                _getStatusText(),
+                style: getBoldSigInHeadingStyle(fontSize: 20),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 40.h,
           ),
           ref.watch(fetchOnlineUsersCount).when(
               data: (onlineUsers) {
@@ -92,17 +122,14 @@ class BlindChatHomeScreen extends ConsumerWidget {
                 );
               },
               error: (error, st) => const OnlineBar(
-                    numberOfOnlinePeople: 0,
-                  ),
+                numberOfOnlinePeople: 0,
+              ),
               loading: () => const OnlineBar(
-                    numberOfOnlinePeople: 0,
-                  )),
-          SizedBox(
-            height: 55.h,
-          ),
+                numberOfOnlinePeople: 0,
+              )),
           const Spacer(),
           SizedBox(
-            height: 480.h,
+            height: 587.h,
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -117,7 +144,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
                 Positioned(
                   bottom: 0,
                   child: Container(
-                    height: 322.h,
+                    height: 587.h,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         color: MyColors.white,
@@ -146,8 +173,15 @@ class BlindChatHomeScreen extends ConsumerWidget {
                           style: getMediumStyle(fontSize: MyFonts.size20),
                         ),
                         SizedBox(
-                          height: 16.h,
+                          height: 58.h,
                         ),
+
+                        _buildInfoElement(
+                            'chat to random people for 3 mins\neveryday from 7PM-10PM'),
+                        _buildInfoElement(
+                            'continue the conversation on instagram\npost the 3 min timeout'),
+                        _buildInfoElement(
+                            'make sure to add your interests and \nyour instagram handle on “my profile” \nbefore you start'),
                         // CommonOutlineBorderButton(
                         //   onTap: () {
                         //     Navigator.pushNamed(
@@ -162,9 +196,10 @@ class BlindChatHomeScreen extends ConsumerWidget {
                           padding: EdgeInsets.symmetric(horizontal: 55.w),
                           child: Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50.r),
-                                border: Border.all(
-                                    color: MyColors.black, width: 3.w)),
+                              borderRadius: BorderRadius.circular(50.r),
+                              // border: Border.all(
+                              //     color: MyColors.black, width: 3.w),
+                            ),
                             child: SwipeButton.expand(
                               thumb: Icon(
                                 Icons.keyboard_double_arrow_right,
@@ -173,7 +208,7 @@ class BlindChatHomeScreen extends ConsumerWidget {
                               ),
                               activeThumbColor: MyColors.white,
                               activeTrackColor:
-                                  MyColors.yellowLightGradientColor,
+                              MyColors.yellowLightGradientColor,
                               thumbPadding: EdgeInsets.all(8.sp),
                               height: 65.h,
                               width: 302.w,
@@ -199,5 +234,45 @@ class BlindChatHomeScreen extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  Widget _buildInfoElement(String content) {
+    return Padding(
+      padding:
+      EdgeInsets.only(bottom: 18.h, left: 40.w, right: 18.w),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Image.asset(
+            'assets/new_images/check_circle.png',
+            height: 20.h,
+            width: 20.w,
+          ),
+          SizedBox(
+            width: 25.w,
+          ),
+          Text(
+            content,
+            style: getMediumStyle(fontSize: MyFonts.size20),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _getStatusText() {
+    return _checkValidTime() ? 'LIVE':'7 PM - 10 PM ';
+  }
+
+  bool _checkValidTime() {
+    //7:00PM
+    const int startTimeInMinute = 19 * 60;
+
+    //10:00PM
+    const int endTimeInMinute = 22 * 60;
+    final currentTime = DateTime.now();
+    final int now = currentTime.hour * 60 + currentTime.minute;
+    return now >= startTimeInMinute && now <= endTimeInMinute;
   }
 }

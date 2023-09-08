@@ -1,12 +1,7 @@
-
 import 'dart:convert';
-import 'dart:developer';
-import 'dart:io';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gojek_university_app/commons/common_imports/apis_commons.dart';
 import 'package:gojek_university_app/features/resources/chatbot/constants/api_const.dart';
 import 'package:gojek_university_app/features/resources/chatbot/data/model/chat_model.dart';
-import 'package:gojek_university_app/features/resources/chatbot/data/model/sonic_response_model.dart';
 import 'package:http/http.dart' as http;
 
 final chatBotApiServiceProvider = Provider<ChatBotApiService>((ref) {
@@ -65,14 +60,15 @@ class ChatBotApiService {
         'accept': 'application/json',
         'token': Bot_Sonic_Token,
       };
-      var data = '{"question": "$message", "chat_history": []}';
+      var body = {
+        'question': message
+      };
       var url = Uri.parse(baseUrlBotSonic);
-      var res = await http.post(url, headers: headers, body: data);
+      var res = await http.post(url, headers: headers, body: jsonEncode(body));
       if (res.statusCode != 200) {
         print(res.reasonPhrase);
         throw Exception('http.post error: statusCode= ${res.statusCode}');
       }
-
 
       List<dynamic> decodedJson  = jsonDecode(res.body);
       Map<String, dynamic> jsonResponse = decodedJson[0]['data'];
