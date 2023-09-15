@@ -63,8 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '929335192361',
     projectId: 'ashokacompanion',
     storageBucket: 'ashokacompanion.appspot.com',
-    iosClientId:
-        '929335192361-5omt8el6jduquvs8h0b3dtq9rgohu7sm.apps.googleusercontent.com',
+    androidClientId: '929335192361-e11n4anni02krfk8jo1e0ta8b3pj5vl5.apps.googleusercontent.com',
+    iosClientId: '929335192361-5omt8el6jduquvs8h0b3dtq9rgohu7sm.apps.googleusercontent.com',
     iosBundleId: 'com.ashokacompanion.jigyansurout',
   );
 }

@@ -23,7 +23,7 @@ class ProfileUserInfoWidget extends StatelessWidget {
             authNotifierProvider.userModel?.profileImage;
         String id = authNotifierProvider.userModel != null
             ? returnIdFromEmail(authNotifierProvider.userModel!.email)
-            : '';
+            : 'Dummy Text';
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

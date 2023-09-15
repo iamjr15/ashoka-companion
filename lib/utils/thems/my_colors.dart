@@ -14,6 +14,9 @@ class MyColors {
   static const Color greenColor = Color(0xFF3dc88e);
   static const Color purpleColor = Color(0xFFBF52F5);
   static const Color pinkColor = Color(0xFFF923B2);
+  static const Color greyColor = Color(0xFFD6D6D6);
+  static const Color greyishColor = Color(0xFF707070);
+
 
   static const Color slideBarTab1Color = Color(0xFFEC1A37);
   static const Color slideBarTab2Color = Color(0xFFF3D824);

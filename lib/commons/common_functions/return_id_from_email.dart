@@ -14,5 +14,5 @@ String returnIdFromEmail(String email) {
   if (startIndex < 0) {
     startIndex = 0;
   }
-  return email.substring(startIndex, atSymbolIndex);
+  return email.substring(0, atSymbolIndex);
 }

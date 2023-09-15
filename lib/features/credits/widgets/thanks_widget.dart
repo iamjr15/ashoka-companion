@@ -10,7 +10,7 @@ class ThanksWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250.h,
+      // height: 262.h,
       width: double.infinity,
       padding: EdgeInsets.all(20.h),
       margin: EdgeInsets.symmetric(vertical: 10.h),

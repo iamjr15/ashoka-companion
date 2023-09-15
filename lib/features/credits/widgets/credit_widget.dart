@@ -50,13 +50,15 @@ class CreditWidget extends StatelessWidget {
                 height: 65,
               ),
             ),
+
             SizedBox(
               width: 18.h,
             ),
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children:[
                 Container(
                   constraints: BoxConstraints(maxWidth: 213.w),
                   child: Text(
@@ -65,26 +67,37 @@ class CreditWidget extends StatelessWidget {
                         fontSize: MyFonts.size20, color: MyColors.black),
                   ),
                 ),
+
                 SizedBox(
-                  height: 8.h,
-                ),
-                Text(
+                height: 8.h,
+              ),
+
+                Container(
+                constraints: BoxConstraints(maxWidth: 213.w),
+                child: Text(
                   smallSubTitle,
                   style: getMediumStyle(
                       fontSize: MyFonts.size12,
                       color: MyColors.newTextBlackSecondaryColor),
                 ),
+              ),
+
                 SizedBox(
-                  height: 3.h,
-                ),
-                Text(
+                height: 3.h,
+              ),
+
+                Container(
+                constraints: BoxConstraints(maxWidth: 213.w),
+                child: Text(
                   subtitle,
                   style: getMediumStyle(
                       fontSize: MyFonts.size12,
                       color: MyColors.newTextBlackSecondaryColor),
                 )
-              ],
-            )
+              ),
+              ]
+            ),
+
           ],
         ),
       ),

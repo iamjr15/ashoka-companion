@@ -94,7 +94,11 @@ class _MyAppState extends ConsumerState<MyApp> {
                     // return BlindChatChatScreen(name: 'usman asad', uid: 'W82PpYg0jeTSQB1NGNa33allkIE2');
                     return const MainMenuScreen();
                     // return const ManageInterestsScreen();
-                  } else {
+                  }
+                  // if(user.isAnonymous) {
+                  //   return const MainMenuScreen();
+                  // }
+                  else {
                     return const StaffPortalHomeScreen();
                   }
                 } else {

@@ -21,13 +21,20 @@ class MyProfileButton extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          width: 352.w,
-          height: 89.h,
-          margin: EdgeInsets.symmetric(vertical: 10.h),
+          // width: 352.w,
+          // height: 89.h,
+          margin: EdgeInsets.symmetric(
+              vertical: 10.h,
+              horizontal: 19.w,
+          ),
           decoration: BoxDecoration(
-              color: MyColors.newLightGreyColor,
-              borderRadius: BorderRadius.circular(10.r)),
-          padding: EdgeInsets.symmetric(horizontal: 30.w),
+            color: MyColors.newLightGreyColor,
+            borderRadius: BorderRadius.circular(10.r)
+          ),
+          padding: EdgeInsets.symmetric(
+              vertical: 33.h,
+              horizontal: 30.w
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -36,14 +43,15 @@ class MyProfileButton extends StatelessWidget {
                 width: 24.w,
                 height: 24.h,
               ),
+
+              const Spacer(),
               Text(
                 buttonText,
                 style: getMediumStyle(
                     color: MyColors.black, fontSize: MyFonts.size16),
               ),
-              SizedBox(
-                width: 40.w,
-              ),
+              const Spacer(),
+
               Image.asset(
                 AppAssets.arrowStaff,
                 width: 28.w,

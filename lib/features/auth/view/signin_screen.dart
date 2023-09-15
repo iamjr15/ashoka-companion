@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gojek_university_app/commons/common_widgets/custom_button.dart';
 import 'package:gojek_university_app/features/auth/widgets/sigin_custom_button.dart';
@@ -65,7 +66,9 @@ class SignInScreen extends StatelessWidget {
               // ),
               Consumer(builder: (context, ref, child) {
                 return SignInCustomButton(
-                  onPressed: () => studentGoogleSignIn(ref, context),
+                  onPressed: () =>
+                    // FirebaseAuth.instance.signInAnonymously(),
+                    studentGoogleSignIn(ref, context),
                   buttonText: 'sign in with ashoka email',
                   backColor: MyColors.signInStudentButton,
                   borderRadius: 42.r,

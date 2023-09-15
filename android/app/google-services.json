@@ -30,6 +30,14 @@
           }
         },
         {
+          "client_id": "929335192361-lomonvsi84kuhukqsnll1ugud9uhjils.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashokacompanion.jigyansurout",
+            "certificate_hash": "045b24769aa16c5a33242c5528dbd464cb028103"
+          }
+        },
+        {
           "client_id": "929335192361-mmr530nm82lahomeqfqv5jj190lpm1r8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
